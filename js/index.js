@@ -42,9 +42,35 @@ const libros = [{
 
 //Tu codigo JS va acá
 
-
-
-
-
-
+function filtrarAutor (libros,nombreIngresado){
+    switch(nombreIngresado){
+        
+        case "Gabriel Garcia Marquez":
+            return librosFiltrados=filtracion(libros,nombreIngresado);
+        case "William Golding":
+            return librosFiltrados=filtracion(libros,nombreIngresado);
+        case "Julio Verne":
+            return librosFiltrados=filtracion(libros,nombreIngresado);
+        case "Miguel de Cervantes":
+            return librosFiltrados=filtracion(libros, nombreIngresado);
+        case "Herman Melville":
+            return librosFiltrados=filtracion(libros, nombreIngresado);
+        case "Ernest HemingWay":
+            return librosFiltrados=filtracion(libros, nombreIngresado);
+    }
+}
+function filtracion(libros,nombre){
+    let filtrados=[];
+    for(let i=0; i<libros.length;i++){   
+            if(libros[i].autor=== nombre){
+            filtrados.push(libros[i]);
+            }
+    }
+    return filtrados;
+}
+idAutor= document.querySelector("value");
+let librosFiltrados;
+filtrarAutor(libros,idAutor);
+//nombreIngresado= prompt("Ingrese nombre del autor: ")
+//console.log(filtrarAutor(libros, idAutor));
 
